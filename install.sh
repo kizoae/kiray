@@ -26,7 +26,7 @@ elif cat /proc/version | grep -Eqi "ubuntu"; then
 elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
     release="centos"
 else
-    echo -e "${red}未检测到系统版本，请联系脚本作者！${plain}\n" && exit 1
+    echo -e "${red}未检测到系统版本，什么垃圾系统？ 砸了吧！！！！${plain}\n" && exit 1
 fi
 
 arch=$(arch)
@@ -45,7 +45,7 @@ fi
 echo "架构: ${arch}"
 
 if [ "$(getconf WORD_BIT)" != '32' ] && [ "$(getconf LONG_BIT)" != '64' ] ; then
-    echo "本软件不支持 32 位系统(x86)，请使用 64 位系统(x86_64)，如果检测有误，请联系作者"
+    echo "本软件不支持 32 位系统(x86)，请使用 64 位系统(x86_64)，如果检测有误，什么垃圾系统？ 砸了吧！！！！"
     exit 2
 fi
 
@@ -184,7 +184,7 @@ install_XrayR() {
     cd $cur_dir
     rm -f install.sh
     echo -e ""
-    echo "XrayR kizoae优化版 "
+    echo "XrayR kizoae优化版 小写兼容"
     echo "------------------------------------------"
     echo "XrayR                    - 显示管理菜单 (功能更多)"
     echo "XrayR start              - 启动 XrayR"
@@ -200,6 +200,7 @@ install_XrayR() {
     echo "XrayR install            - 安装 XrayR"
     echo "XrayR uninstall          - 卸载 XrayR"
     echo "XrayR version            - 查看 XrayR 版本"
+    echo "kizoae超级优化            - kizoae 永远的神"
     echo "------------------------------------------"
 }
 
